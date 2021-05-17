@@ -19,7 +19,7 @@ posts+='</ul>';document.getElementById('corona').innerHTML=posts;}
 function world(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
 posts+='</ul>';document.getElementById('world').innerHTML=posts;}
 
-function politics(json){var posts="<ul class=mbtlistA>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+function politics(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
 posts+='</ul>';document.getElementById('politics').innerHTML=posts;}
 
 function sports(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}

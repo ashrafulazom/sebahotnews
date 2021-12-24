@@ -55,6 +55,18 @@ posts+='</ul>';document.getElementById('law').innerHTML=posts;}
 function election(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("/s72-c/","/s"+80+"/");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
 posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'>"+title+"</a></li>";}
 posts+='</ul>';document.getElementById('election').innerHTML=posts;}
+function history(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("/s72-c/","/s"+80+"/");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
+posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('history').innerHTML=posts;}
+function tradition(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("/s72-c/","/s"+80+"/");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
+posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('tradition').innerHTML=posts;}
+function comics(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("/s72-c/","/s"+80+"/");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
+posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('comics').innerHTML=posts;}
+function jobnews(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("/s72-c/","/s"+80+"/");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
+posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('jobnews').innerHTML=posts;}
 function listlatH(json){var posts="<ul class=mbtlistlat>";for(var i=1;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;posts+="<li><a href='"+url+"'>"+title+"</a></li>";}
 posts+='</ul>';document.getElementById('listlatH').innerHTML=posts;}
 function listlatP(json){var posts="<ul class=mbtlistlat>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;posts+="<li><a href='"+url+"'>"+title+"</a></li>";}

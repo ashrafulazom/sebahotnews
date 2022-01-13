@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var multiFeed = {
+    feedsUri: [
+        {
+            name: "Blogger",
+            url: "https://iqbalfp.blogspot.com",
+            tag: "Blogger"
+        },
+        {
+            name: "Crack and Keygen",
+            url: "https://iqbalfp.blogspot.com/",
+            tag: "Crack%20%26%20Keygen"
+        },
+        {
+            name: "Game PC",
+            url: "https://iqbalfp.blogspot.com",
+            tag: "Game%20PC"
+        },
+        {
+            name: "Sekedar Info",
+            url: "https://iqbalfp.blogspot.com",
+            tag: "Sekedar%20Info"
+        },
+        {
+            name: "Tips and Trick",
+            url: "https://iqbalfp.blogspot.com",
+            tag: "Tips%20and%20Trick"
+        },
+        {
+            name: "Tutorial",
+            url: "https://iqbalfp.blogspot.com",
+            tag: "Tutorial"
+        },
+],
+    numPost: 4,
+    showThumbnail: true,
+    showSummary: false,
+    summaryLength: 0,
+    titleLength: "auto",
+    thumbSize: 72,
+    containerId: "feed-list-container",
+    readMore: {
+        text: "Selengkapnya",
+        endParam: "?max-results=5"
+    }
+};
+</script>
+<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' id='fontawesome' rel='stylesheet' type='text/css'/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+var mf_defaults={feedsUri:[{name:"Featured",url:"https://vampyleaf.blogspot.com",tag:"Featured"},{name:"Humor",url:"https://vampyleaf.blogspot.com",tag:"Humor"},{name:"Info Menarik",url:"https://vampyleaf.blogspot.com",tag:"Info Menarik"}],numPost:4,showThumbnail:true,showSummary:true,summaryLength:80,titleLength:"auto",thumbSize:72,newTabLink:false,containerId:"feed-list-container",listClass:"list-entries",readMore:{text:"More",endParam:"?max-results=20"},autoHeight:false,current:0,onLoadFeed:function(a){},onLoadComplete:function(){},loadFeed:function(c){var d=document.getElementsByTagName("head")[0],a=document.getElementById(this.containerId),b=document.createElement("script");b.type="text/javascript";b.src=this.feedsUri[c].url+"/feeds/posts/summary"+(this.feedsUri[c].tag?"/-/"+this.feedsUri[c].tag:"")+"?alt=json-in-script&max-results="+this.numPost+"&callback=listEntries";d.appendChild(b)}};for(var i in mf_defaults){mf_defaults[i]=(typeof(multiFeed[i])!==undefined&&typeof(multiFeed[i])!=="undefined")?multiFeed[i]:mf_defaults[i]}function listEntries(q){var p=q.feed.entry,c=mf_defaults,h=document.getElementById(c.containerId),a=document.createElement("div"),d="<ul>",l=c.feedsUri.length,n,k,m,g;for(var f=0;f<c.numPost;f++){if(f==p.length){break}n=(c.titleLength!=="auto")?p[f].title.$t.substring(0,c.titleLength)+(c.titleLength<p[f].title.$t.length?"&hellip;":""):p[f].title.$t;m=("summary" in p[f])?p[f].summary.$t.replace(/<br ?\/?>/g," ").replace(/<.*?>/g,"").replace(/[<>]/g,""):"";m=(c.summaryLength<m.length)?m.substring(0,c.summaryLength)+"&hellip;":m;g=("media$thumbnail" in p[f])?'<img src="'+p[f].media$thumbnail.url.replace(/\/s72(\-c)?\//,"/s"+c.thumbSize+"-c/")+'" style="width:'+c.thumbSize+"px;height:"+c.thumbSize+'px;" width="72" height="72">':'<span class="fake-img" style="width:'+c.thumbSize+"px;height:"+c.thumbSize+'px;"></span>';for(var e=0,b=p[f].link.length;e<b;e++){k=(p[f].link[e].rel=="alternate")?p[f].link[e].href:"#"}d+='<li><div width="72" height="72" class="inner"'+(!c.autoHeight?' style="height:'+c.thumbSize+'px;overflow:hidden;"':"")+">";d+=(c.showThumbnail)?g:"";d+='<div class="title"><a href="'+k+'"'+(c.newTabLink?' target="_blank"':"")+">"+n+"</a></div>";d+='<div class="summary">';d+="<span"+(!c.showSummary?' style="display:none;"':"")+">";d+=(c.showSummary)?m:"";d+="</span></div>";d+='<span style="display:block;clear:both;"></span></div></li>'}d+="</ul>";d+='<div class="more-link"><a href="'+c.feedsUri[c.current].url.replace(/\/$/,"")+"/search/label/"+c.feedsUri[c.current].tag+c.readMore.endParam+'"'+(c.newTabLink?' target="_blank"':"")+">"+c.readMore.text+"</a></div>";a.className=c.listClass;a.innerHTML='<div class="main-title"><h4>'+c.feedsUri[c.current].name+"</h4></div>"+d;h.appendChild(a);c.onLoadFeed(c.current);if((c.current+1)<l){c.loadFeed(c.current+1)}if((c.current+1)==l){c.onLoadComplete()}c.current++}mf_defaults.loadFeed(0);
+</script>
+<style>body {
+  background: #eaeaea none repeat scroll top left;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: normal;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 12% auto;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Multi Feed Label */
+
+.post-body *,
+.post-body *:after,
+.post-body *:before {
+  box-sizing: initial;
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+}
+
+.list-entries {
+  display: table;
+  background: #fdfdfd;
+  margin: 1.5% 1%;
+  width: 31.3%;
+  float: left;
+  font-size: 80%;
+}
+
+.list-entries ul,
+.list-entries li {
+  margin: 0;
+  list-style: none
+}
+
+#feed-list-container ul li {
+  background: #fdfdfd;
+  padding: 15px;
+  line-height: normal;
+  border: 1px solid #eee;
+  border-top: 0;
+  transition: all .3s;
+}
+
+#feed-list-container ul li:hover {
+  background: #fff;
+}
+
+#feed-list-container ul li:last-child {
+  border-bottom: 0;
+}
+
+.list-entries .main-title {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-entries .main-title h4 {
+  position: relative;
+  display: block;
+  font: inherit;
+  font-weight: 700;
+  padding: 1em 1.5em;
+  background-color: #4f93c5;
+  color: #fff;
+  margin: 0;
+  line-height: normal;
+  font-size: 120%;
+  margin-top: 0!important
+}
+
+.list-entries .main-title h4:after {
+  display: inline-block;
+  content: "\f02c";
+  font-family: fontAwesome;
+  font-size: 17.4px;
+  font-style: normal;
+  background-color: #4384b3;
+  color: #fff;
+  top: 0;
+  right: 0;
+  padding: 1em 1.25em;
+  position: absolute;
+  font-weight: 400
+}
+
+.list-entries .title a {
+  font-size: 13px;
+  text-decoration: none;
+  line-height: .5em;
+  color: #333;
+  font-weight: 700;
+  transition: all .3s;
+}
+
+.list-entries .title a:hover {
+  color: #4f93c5
+}
+
+.list-entries img,
+.list-entries .fake-img {
+  border: none;
+  background-color: #333;
+  margin: 0 1em 0 0;
+  padding: 0;
+  float: left
+}
+
+.list-entries .summary {
+  overflow: hidden;
+  color: #999
+}
+
+.list-entries .more-link {
+  border-bottom: none;
+}
+
+.list-entries .more-link a {
+  display: block;
+  line-height: 2em;
+  height: 2em;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #444;
+  padding: 1em 1.5em;
+  position: relative;
+  font-weight: 400;
+  color: #fff;
+  transition: all .3s;
+}
+
+.list-entries .more-link a:hover {
+  background-color: #f97e76;
+  color: #fff;
+}
+
+.list-entries .more-link a:after {
+  display: inline-block;
+  content: "\f054";
+  font-family: fontAwesome;
+  font-size: 16.4px;
+  font-style: normal;
+  background-color: #333;
+  color: #ccc;
+  top: 0;
+  right: 0;
+  padding: 1em 1.25em;
+  position: absolute;
+  font-weight: 400;
+  transition: all .3s;
+}
+
+.list-entries .more-link a:hover:after {
+  background-color: #ea726a;
+  color: #fff;
+}
+
+#Blog1 {
+  margin-right: 0;
+}
+
+#main-wrapper {
+  width: 100%;
+}
+
+#sidebar-wrapper {
+  display: none;
+}
+
+.breadcrumbs,
+.post.hentry {
+  background: transparent;
+}
+
+h2.post_title.entry-title,
+.breadcrumbs {
+  margin-bottom: 0;
+  padding: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.post.hentry {
+  padding-top: 0;
+}
+
+.widget .post-body ul,
+.widget .post-body ol {
+  position: relative;
+}
+
+@media (max-width:640px) {
+  .list-entries {
+    width: 100%;
+  }
+  .list-entries {
+    margin: 2.5% 1%;
+  }
+  .container {
+    padding: 20px;
+  }
+}</style>
+</head>
+<body>
+
+<div class="container">
+<div id="feed-list-container">
+</div>
+</div>
+
+</body>
+</html>
+------------------------------------------------------
+
+<script type='text/javascript'>//<![CDATA[
+function sebatop(json){var posts="<ul class=mbtbig>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;if(json.feed.entry[i].media$thumbnail){thumbUrl = json.feed.entry[i].media$thumbnail.url;thumbnail= thumbUrl.replace("/s72-c/","/s"+400+"/");};posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('sebatop').innerHTML=posts;}
+
+function leadnews(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('leadnews').innerHTML=posts;}
+
+function national(json){var posts="<ul class=mbtbig>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;if(json.feed.entry[i].media$thumbnail){thumbUrl = json.feed.entry[i].media$thumbnail.url;thumbnail= thumbUrl.replace("/s72-c/","/s"+200+"/");};posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('national').innerHTML=posts;}
+
+function nationalL(json){var posts="<ul class=mbtlist>";for(var i=1;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('nationalL').innerHTML=posts;}
+
+function bangladesh(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('bangladesh').innerHTML=posts;}
+
+function corona(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('corona').innerHTML=posts;}
+
+function world(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('world').innerHTML=posts;}
+
+function politics(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('politics').innerHTML=posts;}
+
+function sports(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('sports').innerHTML=posts;}
+
+function economics(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('economics').innerHTML=posts;}
+
+function religion(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('religion').innerHTML=posts;}
+
+function entert(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('entert').innerHTML=posts;}
+
+function edu(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('edu').innerHTML=posts;}
+
+function tech(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('tech').innerHTML=posts;}
+
+function agri(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('agri').innerHTML=posts;}
+
+function editor(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('editor').innerHTML=posts;}
+
+function lifestyle(json){var posts="<ul class=mbtlist>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt=''>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('lifestyle').innerHTML=posts;}
+
+function listlatH(json){var posts="<ul class=mbtlistlat>";for(var i=1;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;posts+="<li><a href='"+url+"'>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('listlatH').innerHTML=posts;}
+
+function listlatP(json){var posts="<ul class=mbtlistlat>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;posts+="<li><a href='"+url+"'>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('listlatP').innerHTML=posts;}
+//]]></script>
+
+-----------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>.mbtlist {
+  list-style-type: none;
+  overflow: hidden
+}
+
+.mbtlist li {
+  margin: 0px auto 20px auto;
+  clear: both;
+  color: #666;
+  font-family: Helvetica;
+  font-size: 12px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 10px;
+}
+
+.mbtlist .mbttitle {
+  font-family: oswald;
+  font-size: 16px;
+  color: #0080ff;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.mbtlist .mbttitle:hover {
+  color: #00A5FF;
+}
+
+font-family:georgia;
+font-size:15px;
+font-weight:bold
+}
+.mbtlist div span {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+.mbtlist span {
+  display: block;
+  margin: 5px 0px 0px;
+  padding-right: 5px;
+}
+.mbtlist .imore {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+  line-height: 0.7em;
+}
+.mbtlist .mbttitle .imgbox {
+  max-width: 80px;
+  max-height: 65px;
+  margin: 0px 10px 10px 0px;
+  padding: 6px;
+  box-shadow: -1px -1px 4px #777;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  overflow: hidden;
+}
+.mbtlist .mbttitle .imgbox > img{
+  width: 100%;
+  vertical-align: middle;
+}
+.mbtlist .icontent {
+  text-align: justify;
+}
+
+.mbtlist li:first-of-type .mbttitle .imgbox
+{
+  display: block;
+  width: 100%;
+  max-width: unset;
+  max-height: unset;
+}</style>
+</head>
+<body>
+
+<script>
+  function getPosts(json) {
+    var posts = "<ul class=mbtlist>";
+    for (var i = 0; i < json.feed.entry.length; i++) {
+      var title = json.feed.entry[i].title.$t;
+      var url = json.feed.entry[i].link.pop().href;
+      if (json.feed.entry[i].media$thumbnail) {
+        thumbUrl = json.feed.entry[i].media$thumbnail.url;
+        thumbnail = thumbUrl.replace("/s72-c/", "/s" + 200 + "/");
+      }
+
+      posts += "<li><a class='mbttitle' href='" + url + "'><span class='imgbox'><img src='" + thumbnail + "'></span>" + title + "</a></li>";
+    }
+    posts += '</ul>';
+    document.getElementById('container').innerHTML = posts;
+  }
+</script>
+
+<div id="container"></div>
+<script src="https://www.sebahotnews.org/feeds/posts/default/-/জাতীয়
+?max-results=5&alt=json&callback=getPosts"></script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+.mbtlist {
+  list-style-type: none;
+  overflow: hidden
+}
+.mbtlist li {
+  margin: 0px auto 20px auto;
+  clear: both;
+  color: #666;
+  font-family: Helvetica;
+  font-size: 12px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 10px;
+}
+.mbtlist .mbttitle {
+  font-family: oswald;
+  font-size: 16px;
+  color: #0080ff;
+  font-weight: normal;
+  text-decoration: none;
+}
+.mbtlist .mbttitle:hover {
+  color: #00A5FF;
+}
+font-family:georgia;
+font-size:15px;
+font-weight:bold
+}
+.mbtlist div span {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+.mbtlist span {
+  display: block;
+  margin: 5px 0px 0px;
+  padding-right: 5px;
+}
+.mbtlist .imore {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+  line-height: 0.7em;
+}
+.mbtlist img {
+  float: left;
+  margin: 0px 10px 10px 0px;
+  border: 6px solid #fff;
+  padding: 0px;
+  width: 80px;
+  height:60px;
+  box-shadow: -1px -1px 4px #777;
+}
+.mbtlist .icontent {
+  text-align: justify;
+}
+</style>
+<script>
+function getPosts(json) {
+	var posts = "<ul class=mbtlist>";
+	for (var i = 0; i < json.feed.entry.length; i++) {
+		var title = json.feed.entry[i].title.$t;
+		var url = json.feed.entry[i].link.pop().href;
+        var thumbnail;
+        if (json.feed.entry[i].media$thumbnail){thumbUrl = json.feed.entry[i].media$thumbnail.url;thumbnail= thumbUrl.replace("/s72-c/","/s"+400+"/");}
+        else {
+        // if post thumbnail not found use a fallback image
+        thumbnail = "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/logo/Seba-Hot-News-280x57.png"
+    }
+
+posts += "<li><a class='mbttitle' href='" + url + "'><img src='" + thumbnail + "'>" + title + "</a></li>";
+	}
+   posts+='</ul>';
+	document.getElementById('container').innerHTML = posts;
+}
+</script>
+</head>
+<body>
+
+<div id="container"></div>
+<script src="https://www.sebahotnews.org/feeds/posts/default/-/বাংলাদেশ
+?max-results=4&alt=json&callback=getPosts"></script>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!-- ######### Writing Callback Function ############# -->       
+<script type="text/javascript">       
+  //----------------------------Defaults       
+  var ListBlogLink = window.location.hostname;       
+  var ListCount = 5;       
+  var TitleCount = 70;       
+  var ListLabel =" ";       
+  var ChrCount = 80;
+  
+      
+  var ImageSize = 100;
+  
+      
+  //----------------------------Function Start      
+  function mbtlist(json) {       
+  document.write('<ul class="mbtlist">');       
+  for (var i = 0; i < ListCount; i++)       
+  {       
+        
+  //-----------------------------Variables Declared       
+  var listing= ListUrl = ListTitle = ListConten = ListContent =ListImage =thumbUrl =sk = "";       
+  //----------------------------- Title URL       
+  for (var j = 0; j < json.feed.entry[i].link.length; j++) {       
+  if (json.feed.entry[i].link[j].rel == 'alternate') {       
+  break;       
+  }       
+  }       
+  ListUrl= "'" + json.feed.entry[i].link[j].href + "'";       
+  //----------------------------------- Title Stirng       
+  if (json.feed.entry[i].title!= null)       
+  {       
+  ListTitle= json.feed.entry[i].title.$t.substr(0, TitleCount);       
+  } 
+  
+      
+  //----------------------------------- Content Check
+  
+      
+  ListConten = json.feed.entry[i].content.$t;       
+  ListContent= ListConten.replace(/(<([^>]+)>)/ig,"").substr(0, ChrCount);
+  
+      
+  //------------------------------------ Thumbnail Check
+  
+      
+  if (json.feed.entry[i].media$thumbnail)      
+  {       
+  thumbUrl = json.feed.entry[i].media$thumbnail.url; 
+  
+      
+  sk= thumbUrl.replace("/s72-c/","/s"+ImageSize+"/");       
+  ListImage= "'" + sk.replace("?imgmax=800","") + "'";       
+  }
+  
+      
+  // Support For 3rd Party Images      
+  else if (json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/) != null)       
+  {       
+  ListImage =  json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/)[1];       
+  }
+  
+      
+  else      
+  {       
+  ListImage= "'http://4.bp.blogspot.com/-HALLtgFeep0/VfryhQ0C5oI/AAAAAAAAPcY/77mSGND4q84/s200/Icon.png'";       
+  }
+  
+      
+       
+  //----------------------------------- Printing List       
+  var listing = "<li><a href="          
+  + ListUrl+           
+    "><img src="           
+  +ListImage+           
+  "/></a><a class='mbttitle' href="       
+  +ListUrl+       
+  "target='_blank'>"       
+  +ListTitle+       
+  "</a><span class='icontent'>"          
+  +ListContent+           
+  " ...  <a href="           
+  +ListUrl+           
+  " class='imore'>»</a></span></li>";       
+  document.write(listing);       
+  }       
+  document.write("</ul>");       
+  }       
+  </script>       
+</head>
+<body>
+<script>
+
+function getContent(label){
+
+ListBlogLink = "https://www.sebahotnews.org";
+ListCount = 4;
+TitleCount = 70;
+ListLabel = label ?? "seba-top";
+ChrCount = 150;
+    
+document.write("<script src='"+ListBlogLink+"/feeds/posts/default/-/"+ListLabel+"?alt=json-in-script&callback=mbtlist'></"+"script>");       
+    }
+</script>
+
+<script>
+getContent();
+getContent("জাতীয়");
+</script>
+<h1 >This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<div id="x-post"  style="background:yellow"></div>
+<div id="y-post"  style="background:green"></div>
+</body>
+</html>
+-------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+var ListBlogLink = window.location.hostname;
+var ListCount = 5;
+var TitleCount = 70;
+var ListLabel = " ";
+var ChrCount = 80;
+var ImageSize = 100;
+
+function seba(json) {
+  const ul = document.createElement("ul");
+  ul.classList.add("sebakk");
+  for (var i = 0; i < ListCount; i++) {
+
+    var listing = ListUrl = ListTitle = ListConten = ListContent = ListImage = thumbUrl = sk = "";
+
+    for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+      if (json.feed.entry[i].link[j].rel == 'alternate') {
+        break;
+      }
+    }
+    console.log(i, j, json.feed.entry[i].link[j])
+    ListUrl = "'" + json.feed.entry[i].link[j].href + "'";
+
+    if (json.feed.entry[i].title != null) {
+      ListTitle = json.feed.entry[i].title.$t.substr(0, TitleCount);
+    }
+
+    ListConten = json.feed.entry[i].content.$t;
+    ListContent = ListConten.replace(/(<([^>]+)>)/ig, "").substr(0, ChrCount);
+
+    if (json.feed.entry[i].media$thumbnail) {
+      thumbUrl = json.feed.entry[i].media$thumbnail.url;
+
+
+      sk = thumbUrl.replace("/s72-c/", "/s" + ImageSize + "/");
+      ListImage = "'" + sk.replace("?imgmax=800", "") + "'";
+    } else {
+      ListImage = "'http://4.bp.blogspot.com/-HALLtgFeep0/VfryhQ0C5oI/AAAAAAAAPcY/77mSGND4q84/s200/Icon.png'";
+    }
+
+    var listing = "<li><a href=" +
+      ListUrl +
+      "><img src=" +
+      ListImage +
+      "/></a><a class='sebakk' href=" +
+      ListUrl +
+      "target='_blank'>" +
+      ListTitle +
+      "</a><span class='icontent'>" +
+      ListContent +
+      " ...  <a href=" +
+      ListUrl +
+      " class='imore'>»</a></span></li>";
+    ul.innerHTML += listing
+  }
+  document.body.appendChild(ul);
+
+}
+</script>
+
+</head>
+<body>
+<script>
+
+function getContent(label){
+
+ListBlogLink = "https://www.sebahotnews.org";
+ListCount = 4;
+TitleCount = 70;
+ListLabel = label ?? "seba-top";
+ChrCount = 150;
+
+
+    const scr = document.createElement("script");
+    scr.src = ListBlogLink + "/feeds/posts/default/-/" + ListLabel + "?alt=json-in-script&callback=seba";
+    document.querySelector("head").appendChild(scr);
+    }
+</script>
+
+<script>
+getContent("রাজনীতি");
+getContent("জাতীয়");
+</script>
+<h1 >This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+.mbtlist {
+  list-style-type: none;
+  overflow: hidden
+}
+
+.mbtlist li {
+  margin: 0px auto 20px auto;
+  clear: both;
+  color: #666;
+  font-family: Helvetica;
+  font-size: 12px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 10px;
+}
+
+.mbtlist .mbttitle {
+  font-family: oswald;
+  font-size: 16px;
+  color: #0080ff;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.mbtlist .mbttitle:hover {
+  color: #00A5FF;
+}
+
+font-family:georgia;
+font-size:15px;
+font-weight:bold
+}
+.mbtlist div span {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+.mbtlist span {
+  display: block;
+  margin: 5px 0px 0px;
+  padding-right: 5px;
+}
+.mbtlist .imore {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+  line-height: 0.7em;
+}
+.mbtlist img {
+  float: left;
+  margin: 0px 10px 10px 0px;
+  border: 6px solid #fff;
+  padding: 0px;
+  width: 80px;
+  height: 65px;
+  box-shadow: -1px -1px 4px #777;
+}
+.mbtlist .icontent {
+  text-align: justify;
+}
+</style>
+<script>
+
+function getPosts(json) {
+	var posts = "<ul class=mbtlist>";
+	for (var i = 0; i < json.feed.entry.length; i++) {
+		var title = json.feed.entry[i].title.$t;
+		var url = json.feed.entry[i].link.pop().href;
+		var thumbnail = json.feed.entry[i].media$thumbnail.url;
+		posts += "<li><a class='mbttitle' href='" + url + "'><img src='" + thumbnail + "'>" + title + "</a></li>";
+	}
+   posts+='</ul>';
+	document.getElementById('container').innerHTML = posts;
+}
+
+</script>
+
+<script>
+
+function getPosts1(json) {
+	var posts = "";
+	for (var i = 0; i < json.feed.entry.length; i++) {
+		var title = json.feed.entry[i].title.$t;
+		var url = json.feed.entry[i].link.pop().href;
+		var thumbnail = json.feed.entry[i].media$thumbnail.url;
+		posts += "<div><a href='" + url + "'><img src='" + thumbnail + "'>" + title + "</a></div>";
+	}
+   
+	document.getElementById('container1').innerHTML = posts;
+}
+
+</script>
+</head>
+<body>
+
+<div id="container"></div>
+<script src="https://www.sebahotnews.org/feeds/posts/default/-/জাতীয়
+?max-results=4&alt=json&callback=getPosts"></script>
+
+oiu
+
+<div id="container1"></div>
+<script src="https://www.sebahotnews.org/feeds/posts/default/-/রাজনীতি
+?max-results=4&alt=json&callback=getPosts1"></script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+.mbtlist {
+  list-style-type: none;
+  overflow: hidden
+}
+.mbtlist li {
+  margin: 0px auto 20px auto;
+  clear: both;
+  color: #666;
+  font-family: Helvetica;
+  font-size: 12px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 10px;
+}
+.mbtlist .mbttitle {
+  font-family: oswald;
+  font-size: 16px;
+  color: #0080ff;
+  font-weight: normal;
+  text-decoration: none;
+}
+.mbtlist .mbttitle:hover {
+  color: #00A5FF;
+}
+font-family:georgia;
+font-size:15px;
+font-weight:bold
+}
+.mbtlist div span {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+.mbtlist span {
+  display: block;
+  margin: 5px 0px 0px;
+  padding-right: 5px;
+}
+.mbtlist .imore {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+  line-height: 0.7em;
+}
+.mbtlist img {
+  float: left;
+  margin: 0px 10px 10px 0px;
+  border: 6px solid #fff;
+  padding: 0px;
+  width: 100%;
+  box-shadow: -1px -1px 4px #777;
+}
+.mbtlist .icontent {
+  text-align: justify;
+}
+</style>
+<script>
+function getPosts(json) {
+	var posts = "<ul class=mbtlist>";
+	for (var i = 0; i < json.feed.entry.length; i++) {
+		var title = json.feed.entry[i].title.$t;
+		var url = json.feed.entry[i].link.pop().href;
+        if (json.feed.entry[i].media$thumbnail){thumbUrl = json.feed.entry[i].media$thumbnail.url;thumbnail= thumbUrl.replace("/s72-c/","/s"+400+"/");}
+
+posts += "<li><a class='mbttitle' href='" + url + "'><img src='" + thumbnail + "'>" + title + "</a></li>";
+	}
+   posts+='</ul>';
+	document.getElementById('container').innerHTML = posts;
+}
+</script>
+</head>
+<body>
+
+<div id="container"></div>
+<script src="https://www.sebahotnews.org/feeds/posts/default/-/জাতীয়
+?max-results=4&alt=json&callback=getPosts"></script>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!-- ######### Writing Callback Function ############# -->       
+<script type="text/javascript">       
+  //----------------------------Defaults       
+  var ListBlogLink = window.location.hostname;       
+  var ListCount = 5;       
+  var TitleCount = 70;       
+  var ListLabel =" ";       
+  var ChrCount = 80;
+  
+      
+  var ImageSize = 100;
+  
+      
+  //----------------------------Function Start      
+  function mbtlist(json) {       
+  document.write('<ul class="mbtlist">');       
+  for (var i = 0; i < ListCount; i++)       
+  {       
+        
+  //-----------------------------Variables Declared       
+  var listing= ListUrl = ListTitle = ListConten = ListContent =ListImage =thumbUrl =sk = "";       
+  //----------------------------- Title URL       
+  for (var j = 0; j < json.feed.entry[i].link.length; j++) {       
+  if (json.feed.entry[i].link[j].rel == 'alternate') {       
+  break;       
+  }       
+  }       
+  ListUrl= "'" + json.feed.entry[i].link[j].href + "'";       
+  //----------------------------------- Title Stirng       
+  if (json.feed.entry[i].title!= null)       
+  {       
+  ListTitle= json.feed.entry[i].title.$t.substr(0, TitleCount);       
+  } 
+  
+      
+  //----------------------------------- Content Check
+  
+      
+  ListConten = json.feed.entry[i].content.$t;       
+  ListContent= ListConten.replace(/(<([^>]+)>)/ig,"").substr(0, ChrCount);
+  
+      
+  //------------------------------------ Thumbnail Check
+  
+      
+  if (json.feed.entry[i].media$thumbnail)      
+  {       
+  thumbUrl = json.feed.entry[i].media$thumbnail.url; 
+  
+      
+  sk= thumbUrl.replace("/s72-c/","/s"+ImageSize+"/");       
+  ListImage= "'" + sk.replace("?imgmax=800","") + "'";       
+  }
+  
+      
+  // Support For 3rd Party Images      
+  else if (json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/) != null)       
+  {       
+  ListImage =  json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/)[1];       
+  }
+  
+      
+  else      
+  {       
+  ListImage= "'http://4.bp.blogspot.com/-HALLtgFeep0/VfryhQ0C5oI/AAAAAAAAPcY/77mSGND4q84/s200/Icon.png'";       
+  }
+  
+      
+       
+  //----------------------------------- Printing List       
+  var listing = "<li><a href="          
+  + ListUrl+           
+    "><img src="           
+  +ListImage+           
+  "/></a><a class='mbttitle' href="       
+  +ListUrl+       
+  "target='_blank'>"       
+  +ListTitle+       
+  "</a><span class='icontent'>"          
+  +ListContent+           
+  " ...  <a href="           
+  +ListUrl+           
+  " class='imore'>»</a></span></li>";       
+  document.write(listing);       
+  }       
+  document.write("</ul>");       
+  }       
+  </script>       
+</head>
+<body>
+<script>
+
+function getContent(label){
+
+ListBlogLink = "https://www.sebahotnews.org";
+ListCount = 4;
+TitleCount = 70;
+ListLabel = label ?? "seba-top";
+ChrCount = 150;
+    
+document.write("<script src='"+ListBlogLink+"/feeds/posts/default/-/"+ListLabel+"?alt=json-in-script&callback=mbtlist'></"+"script>");       
+    }
+</script>
+
+<script>
+getContent();
+getContent("জাতীয়");
+</script>
+<h1 >This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<div id="x-post"  style="background:yellow"></div>
+<div id="y-post"  style="background:green"></div>
+</body>
+</html>
+---------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+var ListBlogLink = window.location.hostname;
+var ListCount = 5;
+var TitleCount = 70;
+var ListLabel = " ";
+var ChrCount = 80;
+var ImageSize = 100;
+
+function seba(json) {
+  const ul = document.createElement("ul");
+  ul.classList.add("sebakk");
+  for (var i = 0; i < ListCount; i++) {
+
+    var listing = ListUrl = ListTitle = ListConten = ListContent = ListImage = thumbUrl = sk = "";
+
+    for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+      if (json.feed.entry[i].link[j].rel == 'alternate') {
+        break;
+      }
+    }
+    console.log(i, j, json.feed.entry[i].link[j])
+    ListUrl = "'" + json.feed.entry[i].link[j].href + "'";
+
+    if (json.feed.entry[i].title != null) {
+      ListTitle = json.feed.entry[i].title.$t.substr(0, TitleCount);
+    }
+
+    ListConten = json.feed.entry[i].content.$t;
+    ListContent = ListConten.replace(/(<([^>]+)>)/ig, "").substr(0, ChrCount);
+
+    if (json.feed.entry[i].media$thumbnail) {
+      thumbUrl = json.feed.entry[i].media$thumbnail.url;
+
+
+      sk = thumbUrl.replace("/s72-c/", "/s" + ImageSize + "/");
+      ListImage = "'" + sk.replace("?imgmax=800", "") + "'";
+    } else {
+      ListImage = "'http://4.bp.blogspot.com/-HALLtgFeep0/VfryhQ0C5oI/AAAAAAAAPcY/77mSGND4q84/s200/Icon.png'";
+    }
+
+    var listing = "<li><a href=" +
+      ListUrl +
+      "><img src=" +
+      ListImage +
+      "/></a><a class='sebakk' href=" +
+      ListUrl +
+      "target='_blank'>" +
+      ListTitle +
+      "</a><span class='icontent'>" +
+      ListContent +
+      " ...  <a href=" +
+      ListUrl +
+      " class='imore'>»</a></span></li>";
+    ul.innerHTML += listing
+  }
+  document.body.appendChild(ul);
+
+}
+</script>
+
+</head>
+<body>
+<script>
+
+function getContent(label){
+
+ListBlogLink = "https://www.sebahotnews.org";
+ListCount = 4;
+TitleCount = 70;
+ListLabel = label ?? "seba-top";
+ChrCount = 150;
+
+
+    const scr = document.createElement("script");
+    scr.src = ListBlogLink + "/feeds/posts/default/-/" + ListLabel + "?alt=json-in-script&callback=seba";
+    document.querySelector("head").appendChild(scr);
+    }
+</script>
+
+<script>
+getContent("রাজনীতি");
+getContent("জাতীয়");
+</script>
+<h1 >This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------
+
+//----------------------------Defaults       
+var ListBlogLink = "https://www.sebahotnews.org",
+    ListCount = 4,
+    TitleCount = 70,
+    ChrCount = 150,
+ ImageSize = 100;
+
+
+const lists = [{"label":"seba-top" },{"label":"lead-news" },{"label":"top-news" }]
+let cnt = 0;
+
+function next() {
+  if (cnt>=lists.length) return
+  document.getElementById("container").innerHTML += `<div class='catcol ${lists[cnt].label}'></div>`
+  const scr = document.createElement("script");
+  scr.src = ListBlogLink + "/feeds/posts/default/-/" + lists[cnt].label + "?alt=json-in-script&callback=mbtlist";
+  document.querySelector("head").appendChild(scr);
+};  
+
+next(); // start
+
+
+function mbtlist(json) {
+  let div = document.querySelector("#container ."+lists[cnt].label);
+  let html = '<ul class="mbtlist">';
+  for (var i = 0; i < ListCount; i++) {
+
+    //-----------------------------Variables Declared       
+    var listing = ListUrl = ListTitle = ListConten = ListContent = ListImage = thumbUrl = sk = "";
+    //----------------------------- Title URL       
+    for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+      if (json.feed.entry[i].link[j].rel == 'alternate') {
+        break;
+      }
+    }
+    ListUrl = "'" + json.feed.entry[i].link[j].href + "'";
+    //----------------------------------- Title Stirng       
+    if (json.feed.entry[i].title != null) {
+      ListTitle = json.feed.entry[i].title.$t.substr(0, TitleCount);
+    }
+
+
+    //----------------------------------- Content Check
+
+    ListConten = json.feed.entry[i].content.$t;
+    ListContent = ListConten.replace(/(<([^>]+)>)/ig, "").substr(0, ChrCount);
+
+
+    //------------------------------------ Thumbnail Check
+
+    if (json.feed.entry[i].media$thumbnail) {
+      thumbUrl = json.feed.entry[i].media$thumbnail.url;
+
+
+      sk = thumbUrl.replace("/s72-c/", "/s" + ImageSize + "/");
+      ListImage = "'" + sk.replace("?imgmax=800", "") + "'";
+    }
+
+    // Support For 3rd Party Images      
+    else if (json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/) != null) {
+      ListImage = json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/)[1];
+    } else {
+      ListImage = "'http://4.bp.blogspot.com/-HALLtgFeep0/VfryhQ0C5oI/AAAAAAAAPcY/77mSGND4q84/s200/Icon.png'";
+    }
+
+    //----------------------------------- Printing List       
+    var listing = "<li><a href=" +
+      ListUrl +
+      "><img src=" +
+      ListImage +
+      "/></a><a class='mbttitle' href=" +
+      ListUrl +
+      "target='_blank'>" +
+      ListTitle +
+      "</a><span class='icontent'>" +
+      ListContent +
+      " ...  <a href=" +
+      ListUrl +
+      " class='imore'>»</a></span></li>";
+    html += listing;
+  }
+  html += "</ul>";
+  div.innerHTML = html;
+  cnt++;  
+  next(); // call next 
+}
+
+css------------------------------------
+.seba-top { background-color:orange;}
+.top-news { background-color:tan;}
+.lead-news { background-color:yellow;}
+.catcol {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.mbtlist {
+  list-style-type: none;
+  overflow: hidden
+}
+
+.mbtlist li {
+  margin: 0px auto 20px auto;
+  clear: both;
+  color: #666;
+  font-family: Helvetica;
+  font-size: 12px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 10px;
+}
+
+.mbtlist .mbttitle {
+  font-family: oswald;
+  font-size: 16px;
+  color: #0080ff;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.mbtlist .mbttitle:hover {
+  color: #00A5FF;
+}
+
+font-family:georgia;
+font-size:15px;
+font-weight:bold
+}
+.mbtlist div span {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+.mbtlist span {
+  display: block;
+  margin: 5px 0px 0px;
+  padding-right: 5px;
+}
+.mbtlist .imore {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+  line-height: 0.7em;
+}
+.mbtlist img {
+  float: left;
+  margin: 0px 10px 10px 0px;
+  border: 6px solid #fff;
+  padding: 0px;
+  width: 80px;
+  height: 65px;
+  box-shadow: -1px -1px 4px #777;
+}
+.mbtlist .icontent {
+  text-align: justify;
+}
+
+html--------------------------
+<div id="container"></div>
+-------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+.catcol {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.mbtlist {
+  list-style-type: none;
+  overflow: hidden
+}
+
+.mbtlist li {
+  margin: 0px auto 20px auto;
+  clear: both;
+  color: #666;
+  font-family: Helvetica;
+  font-size: 12px;
+  border-bottom: 1px dotted #ddd;
+  padding-bottom: 10px;
+}
+
+.mbtlist .mbttitle {
+  font-family: oswald;
+  font-size: 16px;
+  color: #0080ff;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.mbtlist .mbttitle:hover {
+  color: #00A5FF;
+}
+
+font-family:georgia;
+font-size:15px;
+font-weight:bold
+}
+.mbtlist div span {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+.mbtlist span {
+  display: block;
+  margin: 5px 0px 0px;
+  padding-right: 5px;
+}
+.mbtlist .imore {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+  line-height: 0.7em;
+}
+.mbtlist img {
+  float: left;
+  margin: 0px 10px 10px 0px;
+  border: 6px solid #fff;
+  padding: 0px;
+  width: 80px;
+  height: 65px;
+  box-shadow: -1px -1px 4px #777;
+}
+.mbtlist .icontent {
+  text-align: justify;
+}
+</style>
+<script>
+var ListBlogLink = window.location.hostname;
+var ListCount = 5;
+var TitleCount = 70;
+var ListLabel = " ";
+var ChrCount = 80;
+var ImageSize = 100;
+
+function mbtlist(json) {
+  let div = document.querySelector("#container");
+  let html = '<ul class="mbtlist">';
+  for (var i = 0; i < ListCount; i++) {
+
+    //-----------------------------Variables Declared       
+    var listing = ListUrl = ListTitle = ListConten = ListContent = ListImage = thumbUrl = sk = "";
+    //----------------------------- Title URL       
+    for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+      if (json.feed.entry[i].link[j].rel == 'alternate') {
+        break;
+      }
+    }
+    ListUrl = "'" + json.feed.entry[i].link[j].href + "'";
+    //----------------------------------- Title Stirng       
+    if (json.feed.entry[i].title != null) {
+      ListTitle = json.feed.entry[i].title.$t.substr(0, TitleCount);
+    }
+
+
+    //----------------------------------- Content Check
+
+    ListConten = json.feed.entry[i].content.$t;
+    ListContent = ListConten.replace(/(<([^>]+)>)/ig, "").substr(0, ChrCount);
+
+
+    //------------------------------------ Thumbnail Check
+
+    if (json.feed.entry[i].media$thumbnail) {
+      thumbUrl = json.feed.entry[i].media$thumbnail.url;
+
+
+      sk = thumbUrl.replace("/s72-c/", "/s" + ImageSize + "/");
+      ListImage = "'" + sk.replace("?imgmax=800", "") + "'";
+    }
+
+    // Support For 3rd Party Images      
+    else if (json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/) != null) {
+      ListImage = json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/)[1];
+    } else {
+      ListImage = "'http://4.bp.blogspot.com/-HALLtgFeep0/VfryhQ0C5oI/AAAAAAAAPcY/77mSGND4q84/s200/Icon.png'";
+    }
+
+    //----------------------------------- Printing List       
+    var listing = "<li><a href=" +
+      ListUrl +
+      "><img src=" +
+      ListImage +
+      "/></a><a class='mbttitle' href=" +
+      ListUrl +
+      "target='_blank'>" +
+      ListTitle +
+      "</a><span class='icontent'>" +
+      ListContent +
+      "</span></li>";
+    html += listing;
+  }
+  html += "</ul>";
+  div.innerHTML = html;
+}
+</script>
+
+</head>
+<body>
+<div id="container"></div>
+<script>
+var ListBlogLink = "https://www.sebahotnews.org",
+    ListCount = 5,
+    TitleCount = 70,
+    ListLabel = "রাজনীতি";
+    ChrCount = 0,
+    ImageSize = 100;
+  document.getElementById("container").innerHTML 
+  const scr = document.createElement("script");
+  scr.src = ListBlogLink + "/feeds/posts/default/-/" +ListLabel+ "?alt=json-in-script&callback=mbtlist";
+  document.querySelector("head").appendChild(scr);
+</script>
+</body>
+</html>
+----------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+.container {
+  max-width: 320px;
+  margin: 4% auto;
+  padding: 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container h1,
+.container h2 {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.container h2 {
+  margin-top: 30px;
+}
+
+ul#recent-posts{width:100%;margin:0 auto;padding:0!important;list-style-type:none}
+ul#recent-posts li{background:#FFF;padding:0!important;margin-bottom:10px;overflow:hidden;width:100%;height:auto;box-shadow:2px 2px 3px rgba(0,0,0,.03);}
+ul#recent-posts li img{width:90px;height:70px;margin:0 10px 0 0;float:left;object-fit: cover;}
+ul#recent-posts li .title_post{padding:10px!important;line-height: 1;position:relative;margin-left:90px;}
+ul#recent-posts li a{color:#333;font-family:inherit;font-size:14px;font-weight:500;text-decoration:none}
+ul#recent-posts li a:hover{color:#8e8efa}
+ul#recent-posts:after{content:"";display:block;clear:both}
+</style>
+
+<script>
+var homePage = "https://www.sebahotnews.org",numPosts = 5;
+function downloadJSAtOnload(){var d=document.createElement("script");d.src="https://cdn.jsdelivr.net/gh/Indzign/InSEO@master/recentposty.js",document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+</script>
+</head>
+<body>
+<div class="container">
+  <h1>Recent Post</h1>
+  <ul id="recent-posts"></ul>
+</div>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mbtlistA{list-style-type:none;overflow:hidden}.mbtlistA li{margin:0 auto 5px auto;clear:both;font-size:12px;border-bottom:2px solid #ddd;padding-bottom:3px;overflow:hidden}.mbtlistA li:first-of-type img{width:100%;height: 10%;}.mbtlistA .mbttitle{font-size:15px;font-weight:400;text-decoration:none}.mbtlistA img{
+float:left;margin:0 5px 5px 0;border:2px solid #fff;padding:0;width:80px;height:65px;box-shadow:-1px -1px 4px #777}
+</style>
+</head>
+<body>
+
+<script>
+  function getPosts(json) {
+    var posts = "<ul class=mbtlistA>";
+    for (var i = 0; i < json.feed.entry.length; i++) {
+      var title = json.feed.entry[i].title.$t;
+      var url = json.feed.entry[i].link.pop().href;
+      if (json.feed.entry[i].media$thumbnail) {
+        thumbUrl = json.feed.entry[i].media$thumbnail.url;
+        thumbnail = thumbUrl.replace("/s72-c/", "/s" + 200 + "/");
+      }
+
+      posts += "<li><a class='mbttitle' href='" + url + "'><span class='imgbox'><img src='" + thumbnail + "'></span>" + title + "</a></li>";
+    }
+    posts += '</ul>';
+    document.getElementById('container').innerHTML = posts;
+  }
+</script>
+
+<div id="container"></div>
+<script src="https://www.sebahotnews.org/feeds/posts/default/-/জাতীয়
+?max-results=5&alt=json&callback=getPosts"></script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var multiFeed = {
+    feedsUri: [
+        {
+            name: "Blogger",
+            url: "https://sebahotnews.org",
+            tag: "জাতীয়"
+        },
+        {
+            name: "Crack and Keygen",
+            url: "https://sebahotnews.org",
+            tag: "বাংলাদেশ"
+        },
+        {
+            name: "Game PC",
+            url: "https://sebahotnews.org",
+            tag: "কৃষি-কথা"
+        },
+        {
+            name: "Sekedar Info",
+            url: "https://sebahotnews.org",
+            tag: "জাতীয়"
+        },
+        {
+            name: "Tips and Trick",
+            url: "https://sebahotnews.org",
+            tag: "রাজনীতি"
+        },
+        {
+            name: "Tutorial",
+            url: "https://sebahotnews.org",
+            tag: "ধর্ম"
+        },
+        {
+            name: "Blogger",
+            url: "https://sebahotnews.org",
+            tag: "জাতীয়"
+        },
+        {
+            name: "Crack and Keygen",
+            url: "https://sebahotnews.org",
+            tag: "বাংলাদেশ"
+        },
+        {
+            name: "Game PC",
+            url: "https://sebahotnews.org",
+            tag: "কৃষি-কথা"
+        },
+        {
+            name: "Sekedar Info",
+            url: "https://sebahotnews.org",
+            tag: "জাতীয়"
+        },
+        {
+            name: "Tips and Trick",
+            url: "https://sebahotnews.org",
+            tag: "রাজনীতি"
+        },
+        {
+            name: "Tutorial",
+            url: "https://sebahotnews.org",
+            tag: "ধর্ম"
+        },
+],
+    numPost: 4,
+    showThumbnail: true,
+    showSummary: false,
+    summaryLength: 0,
+    titleLength: "auto",
+    thumbSize: 72,
+    containerId: "feed-list-container",
+  
+};
+</script>
+
+
+<script>
+var mf_defaults={feedsUri:[{name:"Featured",url:"https://sebahotnews.org",tag:"ধর্ম"},{name:"Humor",url:"https://sebahotnews.org",tag:"রাজনীতি"},{name:"Info Menarik",url:"https://sebahotnews.org",tag:"বিনোদন"}],numPost:4,showThumbnail:true,showSummary:true,summaryLength:80,titleLength:"auto",thumbSize:72,newTabLink:false,containerId:"feed-list-container",listClass:"list-entries",readMore:{text:"More",endParam:"?max-results=20"},autoHeight:false,current:0,onLoadFeed:function(a){},onLoadComplete:function(){},loadFeed:function(c){var d=document.getElementsByTagName("head")[0],a=document.getElementById(this.containerId),b=document.createElement("script");b.type="text/javascript";b.src=this.feedsUri[c].url+"/feeds/posts/summary"+(this.feedsUri[c].tag?"/-/"+this.feedsUri[c].tag:"")+"?alt=json-in-script&max-results="+this.numPost+"&callback=listEntries";d.appendChild(b)}};for(var i in mf_defaults){mf_defaults[i]=(typeof(multiFeed[i])!==undefined&&typeof(multiFeed[i])!=="undefined")?multiFeed[i]:mf_defaults[i]}function listEntries(q){var p=q.feed.entry,c=mf_defaults,h=document.getElementById(c.containerId),a=document.createElement("div"),d="<ul>",l=c.feedsUri.length,n,k,m,g;for(var f=0;f<c.numPost;f++){if(f==p.length){break}n=(c.titleLength!=="auto")?p[f].title.$t.substring(0,c.titleLength)+(c.titleLength<p[f].title.$t.length?"&hellip;":""):p[f].title.$t;m=("summary" in p[f])?p[f].summary.$t.replace(/<br ?\/?>/g," ").replace(/<.*?>/g,"").replace(/[<>]/g,""):"";m=(c.summaryLength<m.length)?m.substring(0,c.summaryLength)+"&hellip;":m;g=("media$thumbnail" in p[f])?'<img src="'+p[f].media$thumbnail.url.replace(/\/s72(\-c)?\//,"/s"+c.thumbSize+"-c/")+'" style="width:'+c.thumbSize+"px;height:"+c.thumbSize+'px;" width="72" height="72">':'<span class="fake-img" style="width:'+c.thumbSize+"px;height:"+c.thumbSize+'px;"></span>';for(var e=0,b=p[f].link.length;e<b;e++){k=(p[f].link[e].rel=="alternate")?p[f].link[e].href:"#"}d+='<li><div width="72" height="72" class="inner"'+(!c.autoHeight?' style="height:'+c.thumbSize+'px;overflow:hidden;"':"")+">";d+=(c.showThumbnail)?g:"";d+='<div class="title"><a href="'+k+'"'+(c.newTabLink?' target="_blank"':"")+">"+n+"</a></div>";d+='<div class="summary">';d+="<span"+(!c.showSummary?' style="display:none;"':"")+">";d+=(c.showSummary)?m:"";d+="</span></div>";d+='<span style="display:block;clear:both;"></span></div></li>'}d+="</ul>";d+='<div class="more-link"><a href="'+c.feedsUri[c.current].url.replace(/\/$/,"")+"/search/label/"+c.feedsUri[c.current].tag+c.readMore.endParam+'"'+(c.newTabLink?' target="_blank"':"")+">"+c.readMore.text+"</a></div>";a.className=c.listClass;a.innerHTML='<div class="main-title"><h4>'+c.feedsUri[c.current].name+"</h4></div>"+d;h.appendChild(a);c.onLoadFeed(c.current);if((c.current+1)<l){c.loadFeed(c.current+1)}if((c.current+1)==l){c.onLoadComplete()}c.current++}mf_defaults.loadFeed(0);
+</script>
+<style>body {
+  background: #eaeaea none repeat scroll top left;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: normal;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 12% auto;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Multi Feed Label */
+
+.post-body *,
+.post-body *:after,
+.post-body *:before {
+  box-sizing: initial;
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+}
+
+.list-entries {
+  display: table;
+  background: #fdfdfd;
+  margin: 1.5% 1%;
+  width: 31.3%;
+  float: left;
+  font-size: 80%;
+}
+
+.list-entries ul,
+.list-entries li {
+  margin: 0;
+  list-style: none
+}
+
+#feed-list-container ul li {
+  background: #fdfdfd;
+  padding: 15px;
+  line-height: normal;
+  border: 1px solid #eee;
+  border-top: 0;
+  transition: all .3s;
+}
+
+#feed-list-container ul li:hover {
+  background: #fff;
+}
+
+#feed-list-container ul li:last-child {
+  border-bottom: 0;
+}
+
+.list-entries .main-title {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-entries .main-title h4 {
+  position: relative;
+  display: block;
+  font: inherit;
+  font-weight: 700;
+  padding: 1em 1.5em;
+  background-color: #4f93c5;
+  color: #fff;
+  margin: 0;
+  line-height: normal;
+  font-size: 120%;
+  margin-top: 0!important
+}
+
+.list-entries .main-title h4:after {
+  display: inline-block;
+  content: "\f02c";
+  font-family: fontAwesome;
+  font-size: 17.4px;
+  font-style: normal;
+  background-color: #4384b3;
+  color: #fff;
+  top: 0;
+  right: 0;
+  padding: 1em 1.25em;
+  position: absolute;
+  font-weight: 400
+}
+
+.list-entries .title a {
+  font-size: 13px;
+  text-decoration: none;
+  line-height: .5em;
+  color: #333;
+  font-weight: 700;
+  transition: all .3s;
+}
+
+.list-entries .title a:hover {
+  color: #4f93c5
+}
+
+.list-entries img,
+.list-entries .fake-img {
+  border: none;
+  background-color: #333;
+  margin: 0 1em 0 0;
+  padding: 0;
+  float: left
+}
+
+.list-entries .summary {
+  overflow: hidden;
+  color: #999
+}
+
+.list-entries .more-link {
+  border-bottom: none;
+}
+
+.list-entries .more-link a {
+  display: block;
+  line-height: 2em;
+  height: 2em;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #444;
+  padding: 1em 1.5em;
+  position: relative;
+  font-weight: 400;
+  color: #fff;
+  transition: all .3s;
+}
+
+.list-entries .more-link a:hover {
+  background-color: #f97e76;
+  color: #fff;
+}
+
+.list-entries .more-link a:after {
+  display: inline-block;
+  content: "\f054";
+  font-family: fontAwesome;
+  font-size: 16.4px;
+  font-style: normal;
+  background-color: #333;
+  color: #ccc;
+  top: 0;
+  right: 0;
+  padding: 1em 1.25em;
+  position: absolute;
+  font-weight: 400;
+  transition: all .3s;
+}
+
+.list-entries .more-link a:hover:after {
+  background-color: #ea726a;
+  color: #fff;
+}
+
+#Blog1 {
+  margin-right: 0;
+}
+
+#main-wrapper {
+  width: 100%;
+}
+
+#sidebar-wrapper {
+  display: none;
+}
+
+.breadcrumbs,
+.post.hentry {
+  background: transparent;
+}
+
+h2.post_title.entry-title,
+.breadcrumbs {
+  margin-bottom: 0;
+  padding: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.post.hentry {
+  padding-top: 0;
+}
+
+.widget .post-body ul,
+.widget .post-body ol {
+  position: relative;
+}
+
+@media (max-width:640px) {
+  .list-entries {
+    width: 100%;
+  }
+  .list-entries {
+    margin: 2.5% 1%;
+  }
+  .container {
+    padding: 20px;
+  }
+}</style>
+</head>
+<body>
+
+<div class="container">
+<div id="feed-list-container">
+</div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mbtlistA{list-style-type:none;overflow:hidden}.mbtlistA li{margin:0 auto 5px auto;clear:both;font-size:12px;border-bottom:2px solid #ddd;padding-bottom:3px;overflow:hidden}.mbtlistA li:first-of-type img{width:100%;height: 10%;}.mbtlistA .mbttitle{font-size:15px;font-weight:400;text-decoration:none}.mbtlistA img{
+float:left;margin:0 5px 5px 0;border:2px solid #fff;padding:0;width:80px;height:65px;box-shadow:-1px -1px 4px #777}
+</style>
+</head>
+<body>
+
+<script>
+ function bangladesh(json){var posts="<ul class=mbtlistA>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("=s72-c","=s"+250+"");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
+posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('bangladesh').innerHTML=posts;}
+</script>
+
+<div id="bangladesh"></div>
+<script src="https://www.sebahotnews.org/feeds/posts/default/-/জাতীয়
+?max-results=5&alt=json&callback=bangladesh"></script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mbtlistA{
+list-style-type:none;
+overflow:hidden
+}
+.mbtlistA li:first-of-type{
+width: 100%;
+}
+.mbtlistA li{
+width: 50%;
+margin:0 auto 5px auto; 
+clear:both;
+font-size:12px;
+border-bottom:2px solid #ddd;
+padding-bottom:3px;
+overflow:hidden;
+display: inline-block;
+}
+
+.mbtlistA li:first-of-type img{width:100%;height: 10%;}
+.mbtlistA .mbttitle{
+font-size:15px;
+font-weight:400;
+text-decoration:none
+}
+
+.mbtlistA img{
+float:left;
+margin:0 5px 5px 0;
+border:2px solid #fff;
+padding:0;width:80px;
+height:65px;
+box-shadow:-1px -1px 4px #777
+}
+</style>
+</head>
+<body>
+
+<script>
+ function bangladesh(json){var posts="<ul class=mbtlistA>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var url=json.feed.entry[i].link.pop().href;var thumbnail=json.feed.entry[i].media$thumbnail.url;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("=s72-c","=s"+250+"");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
+posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'>"+title+"</a></li>";}
+posts+='</ul>';document.getElementById('bangladesh').innerHTML=posts;}
+</script>
+
+<div id="bangladesh"></div>
+<script src="https://www.sebahotnews.org/feeds/posts/default/-/জাতীয়
+?max-results=5&alt=json&callback=bangladesh"></script>
+
+</body>
+</html>

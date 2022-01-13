@@ -1,3 +1,6 @@
+function sebatop(json){var posts="<div class=mbttop>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var thumbnail=json.feed.entry[i].media$thumbnail.url;var url=json.feed.entry[i].link.pop().href;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("=s72-c","=s"+300+"");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
+posts+="<div><a href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'></a><a class='toptitle' href='"+url+"'>"+title+"</a></div>";}
+posts+='</div>';document.getElementById('sebatop').innerHTML=posts;}
 function sebatop(json){var posts="<ul class=mbtbig>";for(var i=0;i<json.feed.entry.length;i++){var title=json.feed.entry[i].title.$t;var thumbnail=json.feed.entry[i].media$thumbnail.url;var url=json.feed.entry[i].link.pop().href;if(json.feed.entry[i].media$thumbnail){thumbnail=thumbnail.replace("=s72-c","=s"+300+"");}else{thumbnail="https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews/img/seba-200.webp";}
 posts+="<li><a class='mbttitle' href='"+url+"'><img src='"+thumbnail+"' loading='lazy' alt='"+title+"'>"+title+"</a></li>";}
 posts+='</ul>';document.getElementById('sebatop').innerHTML=posts;}

@@ -5,7 +5,7 @@
 "lang": "en-US",
 "display": "standalone",
 "background_color": "#ffffff",
-"start_url": "/?utm_source=homescreen",
+"start_url": "https://www.sebahotnews.org/?utm_source=homescreen",
 "theme_color": "#ffffff",
 "orientation": "portrait",
 "icons": [

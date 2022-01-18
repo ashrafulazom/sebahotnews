@@ -1,5 +1,5 @@
-addEventListener("fetch", event => {
-  const data = {
+
+{
 "name": "Seba Hot News",
 "short_name": "Seba Hot News",
 "description": "Internet based Bengali news service providers",
@@ -11,51 +11,42 @@ addEventListener("fetch", event => {
 "orientation": "portrait",
 "icons": [
 {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-36x36.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-36x36.png",
       "sizes": "36x36"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-72x72.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-72x72.png",
       "sizes": "72x72"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-96x96.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-96x96.png",
       "sizes": "96x96"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-128x128.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-128x128.png",
       "sizes": "128x128"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-144x144.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-144x144.png",
       "sizes": "144x144"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-152x152.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-152x152.png",
       "sizes": "152x152"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-192x192.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-192x192.png",
       "sizes": "192x192"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-384x384.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-384x384.png",
       "sizes": "384x384"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-512x512.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-512x512.png",
       "sizes": "512x512"
     },
     {
-      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.3/pwa/android-icon-1024x1024.png",
+      "src": "https://cdn.jsdelivr.net/gh/ashrafulazom/sebahotnews@v1.5/pwa/android-icon-1024x1024.png",
       "sizes": "1024x1024"
 },                                                                                                                                                ]                                                                                                                                                 }
-  const json = JSON.stringify(data, null, 2)
-  return event.respondWith(
-      new Response(json, {
-            headers: {
-            "content-type": "application/json;charset=UTF-8"
-                          }
-                              })
-                                )
-                                })

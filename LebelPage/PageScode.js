@@ -1,4 +1,3 @@
-<script type="text/javascript">
   var postsPerPage = 11; // প্রথম পাতা: ১ বড় + ৬ ছোট। পরের পাতাগুলোতে ৭টি ছোট।
   var currentPage = 1;
   var allPosts = [];
@@ -95,4 +94,4 @@
       behavior: 'smooth'
     });
   }
-</script>
+
